@@ -12,6 +12,7 @@ from firebase_admin import credentials
 from firebase_admin import db
 from firebase_admin import storage
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -19,6 +20,8 @@ print("hi Nihara ")
 print("hi lima")
 
 >>>>>>> 6af6d12dd3d0c8d8275109854575bc42c11df58d
+=======
+>>>>>>> 10fc7e37100708f541be4280d25eb624074202de
 cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': "https://bank-locker-authentication-default-rtdb.firebaseio.com/",
