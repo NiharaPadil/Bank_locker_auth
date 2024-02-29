@@ -12,7 +12,7 @@ from firebase_admin import storage
 
 
 print("hi Nihara ")
-
+print("hi lima")
 
 cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred, {
