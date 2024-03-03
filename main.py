@@ -67,16 +67,23 @@ while True:
         for encodeFace, faceLoc in zip(encodeCurFrame, faceCurFrame):
             matches = face_recognition.compare_faces(encodeListKnown, encodeFace)
             faceDis = face_recognition.face_distance(encodeListKnown, encodeFace)
-            # print("matches", matches)
-            # print("faceDis", faceDis)
+            #print("matches", matches)
+            #print("faceDis", faceDis)
 
             matchIndex = np.argmin(faceDis)
+
             #print("matchIndex", matchIndex)
 
             y1, x2, y2, x1 = faceLoc
             y1, x2, y2, x1 = y1 * 4, x2 * 4, y2 * 4, x1 * 4
 
-            if matches[matchIndex]:
+
+            if min(faceDis)>.4:
+                print("You are not AUTHORISED")
+                modeType=4
+                imgBackground[44:44 + 633, 808:808 + 414] = imgModeList[modeType]
+
+            elif matches[matchIndex]:
                 print("Known face Detected")
                 print(StudentsId[matchIndex])
                 bbox = 55 + x1, 162 + y1, x2 - x1, y2 - y1
