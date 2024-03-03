@@ -12,19 +12,8 @@ from firebase_admin import credentials
 from firebase_admin import db
 from firebase_admin import storage
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-print("hi Nihara ")
-print("hi lima")
 
->>>>>>> 6af6d12dd3d0c8d8275109854575bc42c11df58d
-=======
->>>>>>> 10fc7e37100708f541be4280d25eb624074202de
-=======
->>>>>>> nihara
 cred = credentials.Certificate("serviceAccountKey.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': "https://bank-locker-authentication-default-rtdb.firebaseio.com/",
@@ -82,7 +71,7 @@ while True:
             # print("faceDis", faceDis)
 
             matchIndex = np.argmin(faceDis)
-            # print("matchIndex", matchIndex)
+            #print("matchIndex", matchIndex)
 
             y1, x2, y2, x1 = faceLoc
             y1, x2, y2, x1 = y1 * 4, x2 * 4, y2 * 4, x1 * 4
@@ -147,12 +136,12 @@ while True:
 
                     # cv2.putText(imgBackground, str(studentsInfo['last_login']), (910, 625),
                     #            cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
-                    cv2.putText(imgBackground, str(studentsInfo['Acc_num']), (1006, 493),
+                    cv2.putText(imgBackground, str(studentsInfo['Acc_num']), (1006, 510),
                             cv2.FONT_HERSHEY_COMPLEX, 0.5, (255, 255, 255), 1)
 
                     (w, h), _ = cv2.getTextSize(studentsInfo['Name'], cv2.FONT_HERSHEY_COMPLEX, 1, 1)
                     offset = (414 - w) // 2
-                    cv2.putText(imgBackground, str(studentsInfo['Name']), (808 + offset, 445),
+                    cv2.putText(imgBackground, str(studentsInfo['Name']), (808 + offset, 450),
                             cv2.FONT_HERSHEY_COMPLEX, 1, (50, 50, 50), 1)
 
                     imStudent_resized = cv2.resize(imStudent, (216, 216))
