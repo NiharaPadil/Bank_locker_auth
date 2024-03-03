@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Locker Authorization</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Welcome to our Bank Locker</h1>
+      <p>Click on proceed button to start face authorization.</p>
+      <form action="{{ url_for('authorize') }}" method="POST">
+        <button id="proceedBtn" type="submit">Proceed</button>
+      </form>
+    </div>
+  </div>
+  <script src="static/script.js"></script>
+</body>
+</html>
