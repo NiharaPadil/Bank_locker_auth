@@ -16,7 +16,7 @@ def capture_and_save_image(img_name):
     st.success(f"Image '{img_name}' saved successfully!")
 
     # Run the encoder file
-    subprocess.run(["python", "EncodeGenerator.py"])
+    #subprocess.run(["python", "EncodeGenerator.py"])
 
 # Function to authenticate the user
 def authenticate_user(username, password):
