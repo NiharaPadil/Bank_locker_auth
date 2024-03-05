@@ -14,28 +14,28 @@ data = {
     "Adithi":
         {
             "Name":"Adithi",
-            "Acc_num":"Num1",
+            "Acc_num":"Bank_act_num_xyz",
             "tot_login":1,
             "last_login":"2024-02-29 00:35:12"
         },
     "Lima":
         {
             "Name": "Lima",
-            "Acc_num": "Num2",
+            "Acc_num": "Bank_act_num_abc",
             "tot_login": 1,
             "last_login": "2024-02-29 00:35:12"
         },
     "Mayur":
         {
             "Name": "Mayur",
-            "Acc_num": "Num3",
+            "Acc_num": "Bank_act_num_pqr",
             "tot_login": 1,
             "last_login": "2024-02-29 00:35:12"
         },
     "Nihara":
         {
             "Name": "Nihara",
-            "Acc_num": "Num4",
+            "Acc_num": "Bank_act_num_lmn",
             "tot_login": 1,
             "last_login": "2024-02-29 00:35:12"
         }

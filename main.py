@@ -1,6 +1,7 @@
 import os
 import pickle
 from datetime import datetime
+import time
 
 import numpy as np
 import cvzone
@@ -11,6 +12,13 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 from firebase_admin import storage
+
+# Load the background image
+imgBackground = cv2.imread('Resources/Welcome.png')
+
+# Display the background image
+cv2.imshow("Bank Locker User Identification", imgBackground)
+cv2.waitKey(6000)  # Wait for 3 seconds (3000 milliseconds)
 
 
 
@@ -83,6 +91,10 @@ while True:
                 modeType=4
                 imgBackground[44:44 + 633, 808:808 + 414] = imgModeList[modeType]
 
+
+
+
+
             elif matches[matchIndex]:
                 print("Known face Detected")
                 print(StudentsId[matchIndex])
@@ -116,7 +128,7 @@ while True:
                 secondsElapsed= (datetime.now()-datetimeObject).total_seconds()
                 print(secondsElapsed)
 
-                if secondsElapsed>30:
+                if secondsElapsed>10:
 
                     ref = db.reference(f'Auth_ppl/{id}')
                     studentsInfo['tot_login']+=1
