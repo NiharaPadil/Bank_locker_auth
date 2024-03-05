@@ -16,7 +16,7 @@ def capture_and_save_image(img_name):
     st.success(f"Image '{img_name}' saved successfully!")
 
     # Run the encoder file
-    subprocess.run(["python", "EncodeGenerator.py"])
+    #subprocess.run(["python", "EncodeGenerator.py"])
 
 # Function to authenticate the user
 def authenticate_user(username, password):
@@ -49,7 +49,7 @@ def login_page():
 # Function to display the image capture and encoder page
 def image_capture_page():
     st.title("Image Capture and Encoder")
-
+    st.image("Resources/Banking.jpeg", use_column_width=True)
     # Display webcam feed
     st.header("Capture Image")
     img_name = st.text_input("Enter image name:")
