@@ -10,7 +10,7 @@ In an era where digital security is paramount, particularly in sensitive areas l
 ## Installation
 1. Clone the repository to your local machine.
 2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Run the "encoder generator" and then `main.py` file to start the Real-Time Bank Locker Access Authentication System.
+3. Run the `EncodeGenerator` and then `main.py` file to start the Real-Time Bank Locker Access Authentication System.
 
 ## Acknowledgements
 We would like to acknowledge the developers of the facial recognition libraries and Firebase for their contributions to this project.
